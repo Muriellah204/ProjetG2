@@ -19,3 +19,7 @@ body {
   background-color: var(--bgc_dark);
   color: var(--color_dark);
 }
+h1{
+  font-size: 2.5rem;
+  color: var(--primary_color);
+}

@@ -24,9 +24,11 @@
   color: var(--color_light);
 }
 
-/* //ta partie pour le style  la page services */
+/* ta partie pour le style  la page services */
 
 
 
-
-/* //ma partie pour le style la page services */
+/* ma partie pour le style la page services */
+.card-bottom1{
+    display: flex;
+}

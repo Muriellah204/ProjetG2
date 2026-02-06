@@ -5,8 +5,8 @@
 
   --bgc_dark: rgb(17, 17, 29);
   --bgc_light: white;
-  --primary_color: orange;
-  --secondary_color: skyblue;
+  --primary_color: #fba000;
+  --secondary_color: #0040a4;
   --color_dark: white;
   --color_light: rgb(17, 17, 29);
 
@@ -18,35 +18,132 @@ body {
   padding: 0;
   background-color: var(--bgc_dark);
   color: var(--color_dark);
+  position: relative;
 }
-h1{
-  font-size: 2.5rem;
+#navBar{
+  width: 100%;
+  height: 4cm;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(30px);
+  position: fixed;
+  z-index: 2000;
+  top: 0px;
+}
+.navContainer{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.logo{
+  width: 9cm;
+  justify-content: start;
+}
+.menuContainer{
+  color: var(--color_dark);
+  width: 20cm;
+  justify-content: space-evenly;
+  list-style: none;
+}
+.menuStyle{
+  width: 4cm;
+  height: 2cm;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a{
+  height: 100%;
+  text-decoration: none;
   color: var(--primary_color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
 }
-.cadre0{
+a:hover{
+  width: 50%;
+  border-bottom: 5px solid var(--primary_color);
+  font-weight: bold;
+}
+.fas,.far{
+  height: 50%;
+  font-size: 30px;
+}
+.actif{
+  width: 2cm;
+  border-bottom: 5px solid var(--primary_color);
+  font-weight: bold;
+}
+img{
+  margin: 30px;padding: 0;
+  height: 90%;
+}
+
+.parent{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 0;
+  top: 4cm;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.GrTitre{
+  margin: 0;
+  padding: 0;
+}
+.Container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.corpAccueil{
+  width: 49%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px;
-  height: 10cm;
-  width: 10cm;
-  background-color: var(--color_dark);
-  justify-content: space-around;
-  align-items: center;
-  border-radius: 15px;
-  position: absolute;
 }
-.cadre1{
-  width: 100%;
-  height: 100%;
+.presentation{
+  flex-direction: column;
+}
+.photoContainer{
   background-color: var(--secondary_color);
-  border-radius: 15px;
-  transform: rotate(30deg);
+  width: 10cm;
+  height:10cm;
+  border: 5px;
+  border-radius: 50px;
+  rotate: 20deg;
 }
-.cadre2{
+.photo{
   width: 100%;
   height: 100%;
-  background-color: var(--primary_color);
-  border-radius: 15px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px;
+  border-radius: 50px;
+  right: 30px;
+  top: 20px;
+}
+.photo2{
   transform: rotate(30deg);
+  border: 2px solid var(--primary_color);
+}
+.photo3{
+  background-color: gray;
+  transform: rotate(-70deg);
+  overflow: hidden;
+}
+.rotate-70{
+  height: 150%;
+  rotate: 50deg;
 }

@@ -4,18 +4,45 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./public/icône/Font-Awesome-Offline-Quick-Icon-Search-master/css/all.min.css">
     <link rel="stylesheet" href="./src/style.css" />
+    <script src="./src/components/navbar.js" defer></script>
     <title>tact2026</title>
   </head>
   <body>
-    <h1>Titre du page Tactinfo</h1>
-    <div id="app" class="cadre0">
-      <div class="cadre1">
-        <div class="cadre2">
+    <nav id="navBar">
+      <div class="logo navContainer">
+        <img src="./public/images/fond et logo/Logo_Tact_Png.png" alt="logo Tactinfo">
+      </div>
+      <div class="menuContainer navContainer">
+          <li class="menu1 menuStyle"><a href="./src/pages/index.html"><i class="fas fa-home"></i>Home </a></li>
+          <li class="menu2 menuStyle"><a href="./src/pages/services.html"><i class="fas fa-globe"></i>Service</a></li>
+          <li class="menu3 menuStyle"><a href="./src/pages/contact.html"><i class="fas fa-phone"></i>Contact</a></li>
+          <li class="menu4 menuStyle"><a href="./src/pages/auth.html"><i class="fas fa-exclamation-circle"></i>Authentify</a></li>
+      </div>
+    </nav>
+    <div class="parent">
+      <div class="Container">
+        <div class="corpAccueil presentation">
+          <h1 class="GrTitre">Bienvenu sur tactinfo</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta earum odit iure rerum in maxime inventore reiciendis.</p>
+          <div class="bouton">
+            <button type="submit">More</button>
+            <button type="submit"><i class="far fa-play-circle"></i>Watch video</button>
+          </div>
+        </div>
+        <div class="corpAccueil">
+          <div class="photoContainer photo1">
+            <div class="photo photo3">
+              <img src="./public/images/—Pngtree—portfolio displays and mobile apps_8471028.jpg" alt="sary prom" class="rotate-70">
+            </div>
+            <div class="photo photo2">
+            </div>
+          </div>
         </div>
       </div>
-      
     </div>
     <script type="module" src="/src/main.js"></script>
+    <script src="./src/assets/js/main.js"></script>
   </body>
 </html>

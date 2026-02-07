@@ -21,7 +21,7 @@ body {
   position: relative;
 }
 #navBar{
-  width: 100%;
+  width: 100vw;
   height: 4cm;
   display: flex;
   justify-content: space-between;

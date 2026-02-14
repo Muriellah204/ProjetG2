@@ -18,7 +18,7 @@
   text-rendering: optimizeLegibility;
 }
 
-/* ma partie pour le style la page services */
+/* ma partie pour le style de page services */
 .espace-nav {
   height: 4cm;
 }
@@ -91,6 +91,7 @@
 .formation-initiale {
   width: 100vw;
   position: absolute;
+  padding-bottom: 2rem;
 }
 .lettre {
   text-align: center;
@@ -105,6 +106,7 @@
   position: absolute;
   display: none;
   width: 100vw;
+  padding-bottom: 4rem;
   h3 {
     text-align: center;
     color: rgb(228, 228, 228);
@@ -256,18 +258,20 @@
   display: none;
 }
 .module-haut {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 7% 100%);
-  background-color: var(--primary_color);
-  width: 30rem;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 6% 100%);
+  background: linear-gradient(90deg , rgb(42, 42, 65) 20%,transparent);
+  width: 36rem;
   height: 3.5rem;
   display: flex;
   align-items: center;
 }
 .module-bas {
-  clip-path: polygon(7% 0, 100% 0%, 100% 100%, 0% 100%);
-  background-color: var(--primary_color);
-  width: 30rem;
+  clip-path: polygon(6% 0, 100% 0%, 100% 100%, 0% 100%);
+  background: linear-gradient(90deg , rgb(42, 42, 65) 20%,transparent);
+  width: 36rem;
   height: 3.5rem;
+  display: flex;
+  align-items: center;
 }
 .word {
   position: relative;
@@ -283,12 +287,40 @@
   justify-content: center;
   h1 {
     color: #1565c0;
+    padding-right: 1.2rem;
+    border-right: 5px solid #1565c0;
   }
+}
+#excel {
+  border-right : 5px solid #4caf50;
+}
+.excel {
+  h1 {
+    color: #4caf50;
+  }
+}
+#powerpoint {
+  color: #ff5722;
+  border-right: 5px solid #ff5722;
 }
 .logo-bureautique img {
   width: 45px;
+  padding: 5px;
+  margin-left: 40px;
+  /* box-shadow: 0 0 10px black; */
+  /* border-radius: 50%; */
+}
+.module-description {
+  p {
+    color: rgb(230, 230, 230);
+    margin-left: 1rem;
+  }
 }
 
+#internet {
+  color: #7acefa;
+  border-right: 5px solid #7acefa;
+}
 /* ANIMATION */
 @keyframes left-right {
   from {

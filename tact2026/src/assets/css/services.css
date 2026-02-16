@@ -28,6 +28,7 @@
   justify-content: center;
   gap: 2rem;
   color: var(--primary_color);
+  padding: 0 0.5rem;
 }
 .cote-gauche {
   background: linear-gradient(90deg, transparent, var(--primary_color) 80%);
@@ -63,6 +64,12 @@
   word-spacing: 5px;
   transition: all 0.2s linear;
 }
+.btn-initiale {
+  margin-left: 2rem;
+}
+.btn-modulaire {
+  margin-right: 2rem;
+}
 .actif-formation {
   color: var(--secondary_color);
   border: 1px solid var(--secondary_color);
@@ -97,10 +104,12 @@
   text-align: center;
   color: var(--white);
   font-size: 1.2rem;
+  padding: 0.5rem;
 }
 .sous-titre-services {
   text-align: center;
   color: var(--secondary_color);
+  padding: 0 0.5rem;
 }
 .formation-modulaire {
   position: absolute;
@@ -116,7 +125,9 @@
 .parent-box-formation {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 2rem;
+  padding: 0 2rem;
 }
 .parent-style-box {
   position: absolute;
@@ -134,12 +145,15 @@
 }
 .box-formation {
   background-color: hsl(240, 26%, 21%);
-  width: 20em;
-  height: 26rem;
+  width: 20rem;
+  min-width: 16rem;
+  height: auto;
   border-radius: 20px;
   overflow: hidden;
   transition: all 0.3s linear;
   position: relative;
+  padding-bottom: 3rem;
+  transition: all 0.3s linear;
 }
 .box-formation:hover {
   box-shadow: 0px 0px 10px var(--primary_color);
@@ -158,6 +172,7 @@
   align-items: center;
   gap: 20px;
   overflow-wrap: anywhere ;
+  padding: 0.5rem 0;
 }
 .icone-box {
   margin-left: 25px;
@@ -228,7 +243,6 @@
   align-items: center;
   position: relative;
 }
-/* ANIMATION */
 
 .description-bureautique {
   display: flex;
@@ -242,8 +256,7 @@
 .image-bureautique {
   background-color: var(--secondary_color);
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-  min-width: 27rem;
-  max-width: 27rem;
+  width: 27rem;
   height: 22rem;
   transition: all 0.5s linear;
   img {
@@ -305,7 +318,6 @@
 }
 .logo-bureautique img {
   width: 45px;
-  padding: 5px;
   margin-left: 40px;
   /* box-shadow: 0 0 10px black; */
   /* border-radius: 50%; */
@@ -321,6 +333,85 @@
   color: #7acefa;
   border-right: 5px solid #7acefa;
 }
+
+.bureautique-mobile {
+  width: 90%;
+  height: 15rem;
+  margin: auto;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  display: none;
+  img {
+    width: 2.5rem;
+    object-fit: contain;
+  }
+}
+.word-mobile {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.mobile {
+  display: flex;
+  align-items: center;
+  i {
+    font-size: 25px;
+    transform: all 0.3s ease-in-out;
+    color: rgb(22, 22, 34);
+  }
+}
+.logo-word {
+  h2 {
+    color: #1565c0;
+  }
+}
+.lg {
+  background-color: rgb(42, 42, 65);
+  width: 11rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  h2 {
+    transform: translate(-18px);
+    line-height: 23px;
+  }
+}
+.btn-word {
+  background-color: #1565c0;
+}
+.btn-mobile {
+  height: 4rem;
+  width: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.excel-mobile {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.btn-excel {
+  background-color: #4caf50;
+}
+.powerpoint-mobile {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.btn-powerpoint {
+  background-color: #ff5722;
+}
+.internet-mobile {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.btn-internet {
+  background-color: #7acefa;
+}
+
 /* ANIMATION */
 @keyframes left-right {
   from {
@@ -330,5 +421,128 @@
     width: 100%;
   }
 }
+
+/* RESPONSIVE */
+/* MOBILE */
+@media (max-width : 767px) {
+  .box-formation {
+    width: 17rem;
+  }
+  .btn-f {
+    padding: 0.5rem 0.5rem;
+    height: auto;
+    font-size: 12px;
+  }
+  .titre-service {
+    font-size: 20px;
+  }
+  .cote-droite, .cote-gauche {
+    width: 5rem;
+    height: 0.5rem;
+  }
+  .bureautique {
+    display: none;
+  }
+  .bureautique-mobile {
+    display: inherit;
+  }
+}
+/* TABLET */
+@media (min-width: 768px) and (max-width: 992px) {
+  /* Formaton initiale */
+  .box-formation {
+    width: 17rem;
+  }
+  .titre-service {
+    font-size: 27px;
+  }
+  .image-bureautique {
+    clip-path: polygon(0% 0%, 70% 0%, 100% 50%, 70% 100%, 0% 100%, 30% 50%);
+    width: 12rem;
+    height: 18rem;
+    img {
+      object-position: center;
+    }
+  }
+  .logo-bureautique img {
+    width: 45px;
+    margin-left: 25px;
+  }
+  .description-bureautique {
+    gap: 0.8rem;
+  }
+  .module-haut {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 4% 100%);
+  }
+  .module-bas {
+    clip-path: polygon(4% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .word {
+    right: 2.5rem;
+  }
+  .excel {
+    position: relative;
+    right: 0.85rem;
+  }
+  .powerpoint {
+    position: relative;
+    right: 0.85rem;
+  }
+  .internet {
+    position: relative;
+    right: 2.5rem;
+  }
+  .logo-bureautique {
+    h1 {
+      font-size: 25px;
+      padding-right: 1.2rem;
+      border-right: 5px solid #1565c0;
+    }
+  }
+}
+/* DESKTOP */
+@media (min-width: 993px) and (max-width: 1199px) {
+
+  .image-bureautique {
+    clip-path: polygon(0% 0%, 70% 0%, 100% 50%, 70% 100%, 0% 100%, 30% 50%);
+    width: 12rem;
+    height: 18rem;
+    img {
+      object-position: center;
+    }
+  }
+  .description-bureautique {
+    gap: 0.8rem;
+  }
+  .module-haut {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 4% 100%);
+  }
+  .module-bas {
+    clip-path: polygon(4% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .word {
+    right: 1rem;
+  }
+  .excel {
+    position: relative;
+    right: -0.8rem;
+  }
+  .powerpoint {
+    position: relative;
+    right: -0.8rem;
+  }
+  .internet {
+    position: relative;
+    right: 1rem;
+  }
+}
+/* EXTRA LARGE DEVICES */
+@media (min-width: 1200px) {
+  .image-bureautique {
+    min-width: 27rem;
+  }
+}
+
+
 
 /* ta partie pour le style  la page services */

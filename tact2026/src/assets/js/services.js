@@ -1,7 +1,7 @@
 const btnFormation = document.querySelector('.btn-formation');
 // Objet bouton Initiale et Modulaire
 const btn = [
-    {balise: "button",contenue : "FORMATION INITIALE", classe : "btn-initiale btn-f"},
+    {balise: "button",contenue : " FORMATION INITIALE ", classe : "btn-initiale btn-f"},
     {balise: "div",contenue : "", classe : "ligne-verticale"},
     {balise: "button",contenue : "FORMATION MODULAIRE", classe : "btn-modulaire btn-f"}
 ]
@@ -11,10 +11,9 @@ btn.map((btnForm) => {
     bouton.setAttribute("class",btnForm.classe);
     bouton.innerHTML = btnForm.contenue;
     btnFormation.appendChild(bouton);
-    if (btnForm.contenue === "FORMATION INITIALE"){
+    if (btnForm.contenue.includes("FORMATION INITIALE")){
         bouton.classList.add("actif-formation");
     }
-    const btnModulaire = document.querySelector('.btn-modulaire');
 })
 // Bouton Initale et Modulaire
 const formationInitiale = document.querySelector('.formation-initiale');

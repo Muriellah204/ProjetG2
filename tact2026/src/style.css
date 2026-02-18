@@ -13,13 +13,7 @@
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
-body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--bgc_dark);
-  color: var(--color_dark);
-  position: relative;
-}
+/* Navbar CSS */
 #navBar{
   width: 100%;
   height: 4cm;
@@ -37,17 +31,17 @@ body {
   align-items: center;
 }
 .logo{
-  width: 9cm;
+  width: 10%;
   justify-content: start;
 }
 .menuContainer{
   color: var(--color_dark);
-  width: 20cm;
+  width: 80%;
   justify-content: space-evenly;
   list-style: none;
 }
 .menuStyle{
-  width: 4cm;
+  width: 20%;
   height: 2cm;
   text-transform: uppercase;
   display: flex;
@@ -78,7 +72,10 @@ a:hover{
   border-bottom: 5px solid var(--primary_color);
   font-weight: bold;
 }
-img{
+.menuResponsive, .ParentMenuRspons{
+  display: none;
+}
+.Tactinfo{
   margin: 30px;padding: 0;
   height: 90%;
 }
@@ -97,53 +94,30 @@ img{
   margin: 0;
   padding: 0;
 }
-.Container{
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-.corpAccueil{
-  width: 49%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.presentation{
-  flex-direction: column;
-}
-.photoContainer{
-  background-color: var(--secondary_color);
-  width: 10cm;
-  height:10cm;
-  border: 5px;
-  border-radius: 50px;
-  rotate: 20deg;
-}
-.photo{
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 5px;
-  border-radius: 50px;
-  right: 30px;
-  top: 20px;
-}
-.photo2{
-  transform: rotate(30deg);
-  border: 2px solid var(--primary_color);
-}
-.photo3{
-  background-color: gray;
-  transform: rotate(-70deg);
-  overflow: hidden;
-}
-.rotate-70{
-  height: 150%;
-  rotate: 50deg;
+@media (width <= 768px) {
+  .menuStyle{
+    display: none;
+  }
+  .menuResponsive{
+    position: absolute;
+    top: 20%;
+    right: 0%;
+    display: flex;
+    color: var(--primary_color);
+    background-color: transparent;
+    border: none;
+  }
+  .ParentMenuRspons{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+    position: absolute;
+    right: 10%;
+    top: 60%;
+    display: none;
+  }
+  .actif{
+    display: none;
+  }
 }

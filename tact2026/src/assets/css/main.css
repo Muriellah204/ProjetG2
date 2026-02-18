@@ -1,0 +1,74 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --bgc_dark: rgb(17, 17, 29);
+  --bgc_light: white;
+  --primary_color: #fba000;
+  --secondary_color: #0040a4;
+  --color_dark: white;
+  --color_light: rgb(17, 17, 29);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bgc_dark);
+  color: var(--color_dark);
+  position: relative;
+}
+
+.Container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.corpAccueil{
+  width: 49%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.presentation{
+  flex-direction: column;
+}
+.photoContainer{
+  background-color: var(--secondary_color);
+  width: 10cm;
+  height:10cm;
+  border: 5px;
+  border-radius: 50px;
+  rotate: 20deg;
+}
+.photo{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px;
+  border-radius: 50px;
+  right: 30px;
+  top: 20px;
+}
+.photo2{
+  transform: rotate(30deg);
+  border: 2px solid var(--primary_color);
+}
+.photo3{
+  background-color: gray;
+  transform: rotate(-70deg);
+  overflow: hidden;
+}
+.rotate-70{
+  height: 150%;
+  rotate: 50deg;
+}

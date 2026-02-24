@@ -19,6 +19,7 @@ body {
   background-color: var(--bgc_dark);
   color: var(--color_dark);
   position: relative;
+ 
 }
 #navBar{
   width: 100%;
@@ -96,6 +97,13 @@ img{
 .GrTitre{
   margin: 0;
   padding: 0;
+  font-size: 50px;
+
+}
+p{
+  font-size: 25px;
+  line-height: 40px;
+  
 }
 .Container{
   width: 100%;
@@ -110,6 +118,7 @@ img{
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 .presentation{
   flex-direction: column;
@@ -146,4 +155,31 @@ img{
 .rotate-70{
   height: 150%;
   rotate: 50deg;
+}
+.bouton button:nth-child(1){
+  background: linear-gradient(90deg,#00419e,#f15910);
+  width: 200px;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight:bold;
+  border: none;
+  color: white;
+  
+}
+.bouton button:nth-child(2){
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  font-weight:bold;
+  border: none;
+  color: #fba000;
+  background-color: transparent;
+}
+.bouton{
+  display: flex;
+  gap: 5rem;
+}
+span{
+  color: #2aa1c3;
 }

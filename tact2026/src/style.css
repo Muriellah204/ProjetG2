@@ -100,11 +100,7 @@ img{
   font-size: 50px;
 
 }
-p{
-  font-size: 25px;
-  line-height: 40px;
-  
-}
+
 .Container{
   width: 100%;
   height: 100vh;
@@ -122,7 +118,13 @@ p{
 }
 .presentation{
   flex-direction: column;
+  p{
+    font-size: 23px;
+    line-height: 40px;
+    
+  }
 }
+
 .photoContainer{
   background-color: var(--secondary_color);
   width: 10cm;
@@ -165,6 +167,7 @@ p{
   font-weight:bold;
   border: none;
   color: white;
+  cursor: pointer;
   
 }
 .bouton button:nth-child(2){

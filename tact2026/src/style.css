@@ -108,14 +108,21 @@ a:hover{
     border: none;
   }
   .ParentMenuRspons{
+    backdrop-filter: blur(30px);
+    width: 200vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: end;
     position: absolute;
-    right: 10%;
+    right: 0%;
     top: 60%;
     display: none;
+  }
+  .menuStyleResponsive{
+    position: relative;
+    right: 5%;
   }
   .actif{
     display: none;

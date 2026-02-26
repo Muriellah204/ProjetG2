@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="./icons/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style 2.css">
+</head>
+<body>
+
+<section id="connexion">
+    <div class="page">
+        <div class="card">
+
+            <div class="form">
+                <h1>Connexion</h1>
+                <p>Connectez-vous à votre compte</p>
+
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Adresse e-mail">
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="password" placeholder="Mot de passe">
+                </div>
+
+                <button>Connexion</button>
+
+                <div class="login-link">
+                    Vous n'avez pas de compte ? <a href="#" id="lien-inscription">Inscriver-vous</a>
+                </div>
+            </div>
+
+            <div class="illustration">
+                <img src="../pinctur/connexion.png" alt="Security" style="width:360px;height:260px;object-fit:contain;">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="inscription">
+    <div class="page">
+        <div class="card_2">
+
+            <form class="form">
+                <h1>Inscription</h1>
+                <p>Créez un nouveau compte</p>
+
+                <div class="input-group">
+                    <label>
+                        <div class="de_2">
+                        <i class="far fa-user"></i>
+                        <input type="text" placeholder="Nom complet" required>
+                        </div>                       
+                    </label>
+
+                </div>
+
+                <div class="input-group">
+                    <label>
+                        <div class="de_2">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="Adresse e-mail" required>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="input-group">
+                    <label>
+                        <div class="de_2">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Mot de passe" required>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="input-group">
+                    <label>
+                        <div class="de_2">
+                        <i class="fas fa-key"></i>
+                        <input type="password" placeholder="Confirmer le mot de passe" required>
+                        </div>
+                    </label>
+                </div>
+
+                <button type="submit">Inscription</button>
+
+                <div class="login-link">
+                    Déjà un compte ? <a href="#" id="lien-connexion">Connectez-vous</a>
+                </div>
+            </form>
+
+            <div class="illustration">
+                <img src="../pinctur/inscription.png" id="sary" alt="Illustration sécurité" style="width:360px;height:260px;object-fit:contain;">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+<script src="../index.js"></script>
+
+
+
+
+    <!-- Ajout minimal: gestion client-side des inscriptions/connexions (stockage local, comparaison exacte) -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const loginSection = document.getElementById('connexion');
+      const signupSection = document.getElementById('inscription');
+
+      // Sélecteurs login (premier bloc input-group = email, second = password)
+      const loginEmail = loginSection.querySelector('.input-group input[type="email"]');
+      const loginPassword = loginSection.querySelector('.input-group input[type="password"]');
+      const loginButton = loginSection.querySelector('button');
+
+      // Sélecteurs signup (form à l'intérieur de la section inscription)
+      const signupForm = signupSection.querySelector('form.form');
+      const signupName = signupForm.querySelector('input[type="text"]');
+      const signupEmail = signupForm.querySelector('input[type="email"]');
+      const signupPasswords = signupForm.querySelectorAll('input[type="password"]');
+      const signupPassword = signupPasswords[0];
+      const signupConfirm = signupPasswords[1];
+
+      function showMessage(container, text, color) {
+        let m = container.querySelector('.auth-msg');
+        if (!m) { m = document.createElement('div'); m.className = 'auth-msg'; container.appendChild(m); }
+        m.textContent = text; m.style.color = color || 'inherit';
+      }
+
+      // Liens pour basculer les vues (respecte votre structure HTML)
+      const lienIns = document.getElementById('lien-inscription');
+      const lienCon = document.getElementById('lien-connexion');
+      if (lienIns) lienIns.addEventListener('click', function (e) { e.preventDefault(); loginSection.style.display = 'none'; signupSection.style.display = 'block'; });
+      if (lienCon) lienCon.addEventListener('click', function (e) { e.preventDefault(); signupSection.style.display = 'none'; loginSection.style.display = 'block'; });
+
+      // Affichage initial: montrer connexion, cacher inscription (ne change pas votre logique existante)
+      signupSection.style.display = 'none';
+
+      // Inscription: stocke l'email et le mot de passe (démonstration locale) et compare exactement au login
+      signupForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const email = (signupEmail.value || '').trim();
+        const pwd = signupPassword.value || '';
+        const conf = signupConfirm.value || '';
+        if (!email || !pwd) { showMessage(signupSection, 'Email et mot de passe requis.', 'red'); return; }
+        if (pwd !== conf) { showMessage(signupSection, "Les mots de passe ne correspondent pas.", 'red'); return; }
+        const users = JSON.parse(localStorage.getItem('users') || '{}');
+        if (users[email]) { showMessage(signupSection, "Email déjà utilisé.", 'red'); return; }
+        users[email] = pwd; // stockage local pour la démo (comparaison exacte au login)
+        localStorage.setItem('users', JSON.stringify(users));
+        showMessage(signupSection, "Inscription réussie.", 'green');
+        setTimeout(function () { signupSection.style.display = 'none'; loginSection.style.display = 'block'; }, 800);
+      });
+
+      // Connexion: vérifie que l'email existe et que le mot de passe correspond exactement
+      loginButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        const email = (loginEmail.value || '').trim();
+        const pwd = loginPassword.value || '';
+        const users = JSON.parse(localStorage.getItem('users') || '{}');
+        if (!email || !pwd) { showMessage(loginSection, 'Email et mot de passe requis.', 'red'); return; }
+        if (!users[email] || users[email] !== pwd) { showMessage(loginSection, 'Identifiants invalides.', 'red'); return; }
+        showMessage(loginSection, 'Connexion réussie.', 'green');
+        // action post-connexion minimale: cacher formulaire (vous pouvez adapter)
+        // loginSection.style.display = 'none';
+      });
+    });
+    </script>
+
+</body>
+</html>
+

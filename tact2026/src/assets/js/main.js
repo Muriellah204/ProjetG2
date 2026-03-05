@@ -11,6 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
         body.style.color = "var(--color_light)";
     }
 
+    if(window.innerWidth<=768){
+        
+    }
+
     menuResponsive.addEventListener("click", () => {
         ParentMenuRspons.style.display = "flex";
     });

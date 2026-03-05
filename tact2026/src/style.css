@@ -22,7 +22,7 @@
   align-items: center;
   backdrop-filter: blur(30px);
   position: fixed;
-  z-index: 2000;
+  z-index: 3000;
   top: 0px;
 }
 .navContainer{
@@ -108,7 +108,7 @@ a:hover{
     border: none;
   }
   .ParentMenuRspons{
-    backdrop-filter: blur(30px);
+    backdrop-filter: blur(10px);
     width: 200vh;
     height: 100vh;
     display: flex;
@@ -116,6 +116,7 @@ a:hover{
     justify-content: start;
     align-items: end;
     position: absolute;
+    z-index: 1000;
     right: 0%;
     top: 60%;
     display: none;

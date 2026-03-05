@@ -37,6 +37,7 @@ body {
   justify-content: center;
 }
 .presentation{
+  display: flex;
   flex-direction: column;
 }
 .photoContainer{

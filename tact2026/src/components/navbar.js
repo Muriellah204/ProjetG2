@@ -1,9 +1,36 @@
-document.addEventListener("DOMContentLoaded",()=>{
-    const body=document.querySelector("body");
-    const navBar=document.querySelector(".navBar");
-    const menuContainer=document.querySelector(".menuContainer");
-    const actif=document.querySelector("a");
-    actif.addEventListener("click",()=>{
-        actif.classList.toggle("actif");
-    })
+document.addEventListener("DOMContentLoaded", () => {
+
+    const menuContainer = document.querySelector(".menuContainer");
+    const menuResponsive = document.querySelector(".menuResponsive");
+    const ParentMenuRspons = document.querySelector(".ParentMenuRspons");
+
+    function checkScreen() {
+
+        if (window.innerWidth >= 768) {
+            menuResponsive.style.display = "none";
+            ParentMenuRspons.style.display = "none";
+            menuContainer.style.display = "flex";
+
+        } else {
+            menuResponsive.style.display = "flex";
+            ParentMenuRspons.style.display = "none";
+
+        }
+
+    }
+
+    checkScreen();
+
+    window.addEventListener("resize", checkScreen);
+
+    menuResponsive.addEventListener("click", () => {
+
+        if (ParentMenuRspons.style.display === "flex") {
+            ParentMenuRspons.style.display = "none";
+        } else {
+            ParentMenuRspons.style.display = "flex";
+        }
+
+    });
+
 });

@@ -1,0 +1,140 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --bgc_dark: rgb(17, 17, 29);
+  --bgc_light: white;
+  --primary_color: #fba000;
+  --secondary_color: #0040a4;
+  --color_dark: white;
+  --color_light: rgb(17, 17, 29);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+img{
+  margin: 30px;padding: 0;
+  height: 90%;
+}
+
+.parent{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 0;
+  top: 4cm;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.GrTitre{
+  margin: 0;
+  padding: 0;
+  font-size: 50px;
+
+}
+
+.Container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.corpAccueil{
+  width: 49%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.presentation{
+  flex-direction: column;
+  p{
+    font-style: italic;
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 40px;
+    
+  }
+}
+
+.photoContainer{
+  background-color: var(--secondary_color);
+  width: 10cm;
+  height:10cm;
+  border: 5px;
+  border-radius: 50px;
+  rotate: 20deg;
+}
+.photo{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px;
+  border-radius: 50px;
+  right: 30px;
+  top: 20px;
+}
+.photo2{
+  transform: rotate(30deg);
+  border: 2px solid var(--primary_color);
+}
+.photo3{
+  background-color: gray;
+  transform: rotate(-70deg);
+  overflow: hidden;
+}
+.rotate-70{
+  height: 150%;
+  rotate: 50deg;
+}
+.bouton button:nth-child(1){
+  background: linear-gradient(90deg,#00419e,#f15910);
+  width: 200px;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight:bold;
+  border: none;
+  color: white;
+  cursor: pointer;
+  
+}
+.bouton button:nth-child(2){
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  font-weight:bold;
+  border: none;
+  color: #fba000;
+  background-color: transparent;
+}
+.bouton{
+  display: flex;
+  gap: 5rem;
+}
+
+span{
+  color: var(--secondary_color);
+}
+@media (width <= 768px) {
+  .Container{
+    margin-top: 50px;
+    flex-direction: column-reverse;
+  }
+  .presentation{
+    margin-top: 100px;
+  }
+  .GrTitre{
+    color: var(--secondary_color);
+  }
+  span{
+    color: var(--color_dark);
+  }
+}

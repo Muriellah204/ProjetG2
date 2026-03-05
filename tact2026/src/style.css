@@ -13,6 +13,7 @@
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -21,6 +22,8 @@ body {
   position: relative;
  
 }
+
+/*Style Navbar*/
 #navBar{
   width: 100%;
   height: 4cm;
@@ -79,110 +82,43 @@ a:hover{
   border-bottom: 5px solid var(--primary_color);
   font-weight: bold;
 }
-img{
-  margin: 30px;padding: 0;
-  height: 90%;
+
+.menuResponsive, .ParentMenuRspons{
+  display: none;
 }
 
-.parent{
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  z-index: 0;
-  top: 4cm;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-.GrTitre{
-  margin: 0;
-  padding: 0;
-  font-size: 50px;
-
-}
-
-.Container{
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-.corpAccueil{
-  width: 49%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-}
-.presentation{
-  flex-direction: column;
-  p{
-    font-size: 23px;
-    line-height: 40px;
-    
+@media (width <= 768px) {
+  .menuStyle{
+    display: none;
   }
-}
-
-.photoContainer{
-  background-color: var(--secondary_color);
-  width: 10cm;
-  height:10cm;
-  border: 5px;
-  border-radius: 50px;
-  rotate: 20deg;
-}
-.photo{
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 5px;
-  border-radius: 50px;
-  right: 30px;
-  top: 20px;
-}
-.photo2{
-  transform: rotate(30deg);
-  border: 2px solid var(--primary_color);
-}
-.photo3{
-  background-color: gray;
-  transform: rotate(-70deg);
-  overflow: hidden;
-}
-.rotate-70{
-  height: 150%;
-  rotate: 50deg;
-}
-.bouton button:nth-child(1){
-  background: linear-gradient(90deg,#00419e,#f15910);
-  width: 200px;
-  height: 50px;
-  border-radius: 50px;
-  font-size: 20px;
-  font-weight:bold;
-  border: none;
-  color: white;
-  cursor: pointer;
-  
-}
-.bouton button:nth-child(2){
-  width: 200px;
-  height: 50px;
-  font-size: 20px;
-  font-weight:bold;
-  border: none;
-  color: #fba000;
-  background-color: transparent;
-}
-.bouton{
-  display: flex;
-  gap: 5rem;
-}
-span{
-  color: #2aa1c3;
+  .menuResponsive{
+    position: absolute;
+    top: 20%;
+    right: 0%;
+    display: flex;
+    color: var(--primary_color);
+    background-color: transparent;
+    border: none;
+  }
+  .ParentMenuRspons{
+    backdrop-filter: blur(10px);
+    width: 200vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+    position: absolute;
+    z-index: 1000;
+    right: 0%;
+    top: 60%;
+    display: none;
+  }
+  .menuStyleResponsive{
+    position: relative;
+    right: 5%;
+  }
+  .actif{
+    display: none;
+  }
 }

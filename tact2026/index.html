@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./public/icône/Font-Awesome-Offline-Quick-Icon-Search-master/css/all.min.css">
     <link rel="stylesheet" href="./src/style.css" />
-    <script src="./src/components/navbar.js" defer></script>
+    <link rel="stylesheet" href="./src/assets/css/main.css">
     <title>tact2026</title>
   </head>
   <body>
@@ -15,19 +15,28 @@
         <img src="./public/images/fond et logo/Logo_Tact_Png.png" alt="logo Tactinfo">
       </div>
       <div class="menuContainer navContainer">
-          <li class="menu1 menuStyle"><a href="./src/pages/index.html"><i class="fas fa-home"></i>Home </a></li>
-          <li class="menu2 menuStyle"><a href="./src/pages/services.html"><i class="fas fa-globe"></i>Service</a></li>
-          <li class="menu3 menuStyle"><a href="./src/pages/contact.html"><i class="fas fa-phone"></i>Contact</a></li>
-          <li class="menu4 menuStyle"><a href="./src/pages/auth.html"><i class="fas fa-exclamation-circle"></i>Authentify</a></li>
+        <li class="menu1 menuStyle"><a href="./src/pages/index.html"><i class="fas fa-home"></i>Home </a></li>
+        <li class="menu2 menuStyle"><a href="./src/pages/services.html"><i class="fas fa-globe"></i>Service</a></li>
+        <li class="menu3 menuStyle"><a href="./src/pages/contact.html"><i class="fas fa-phone"></i>Contact</a></li>
+        <li class="menu4 menuStyle"><a href="./src/pages/auth.html"><i class="fas fa-exclamation-circle"></i>Authentify</a></li>
+          <li>
+            <button type="button" class="menuStyle menuResponsive"><i class="fas fa-bars"></i></button>
+          </li>
+          <div class="ParentMenuRspons">
+            <li class="menuStyleResponsive menu1"><a href="./src/pages/index.html">Home</a></li>
+            <li class="menuStyleResponsive menu2"><a href="./src/pages/services.html">Service</a></li>
+            <li class="menuStyleResponsive menu3"><a href="./src/pages/contact.html">Contact</a></li>
+            <li class="menuStyleResponsive menu4"><a href="./src/pages/auth.html">Authentify</a></li>
+          </div>
       </div>
     </nav>
     <div class="parent">
       <div class="Container">
         <div class="corpAccueil presentation">
-          <h1 class="GrTitre"><span>Bienvenu</span> sur tactinfo</h1>
-          <p>Notre université offre une formation de qualité adaptée aux exigences du monde professionnel. Elle met en avant des valeurs telles que l’excellence, la discipline, la responsabilité et l’innovation.
-Rejoignez-nous dès maintenant et inscrivez-vous pour construire votre avenir avec nous</p>
-          <br><br><br>
+          <h1 class="GrTitre"><span>Bienvenu sur</span> TACTINFO</h1>
+          <p>C'est un institut de formation professionnelle spécialisé dans les technologies de l’information, offrant des formations pratiques et modernes pour préparer les apprenants aux métiers de l’informatique et du numérique. <br>
+            Rejoignez-nous dès maintenant et inscrivez-vous pour construire votre avenir avec nous.</p>
+            <br><br><br>
           <div class="bouton">
             <button type="submit">Inscription</button>
             <button type="submit"><i class="far fa-play-circle"></i>  Watch video</button>
@@ -44,7 +53,9 @@ Rejoignez-nous dès maintenant et inscrivez-vous pour construire votre avenir av
         </div>
       </div>
     </div>
+    <script src="./src/components/navbar.js"></script>
     <script type="module" src="/src/main.js"></script>
     <script src="./src/assets/js/main.js"></script>
   </body>
-</html>
+  </html>
+  

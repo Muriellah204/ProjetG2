@@ -1,0 +1,34 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --bgc_dark: rgb(17, 17, 29);
+  --bgc_light: white;
+  --primary_color: orange;
+  --secondary_color: skyblue;
+  --color_dark: white;
+  --color_light: rgb(17, 17, 29);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+.parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--bgc_light);
+  color: var(--color_light);
+}
+
+/* ta partie pour le style  la page services */
+
+
+
+/* ma partie pour le style la page services */
+.card-bottom1{
+    display: flex;
+}

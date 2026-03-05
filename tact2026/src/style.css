@@ -1,0 +1,124 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --bgc_dark: rgb(17, 17, 29);
+  --bgc_light: white;
+  --primary_color: #fba000;
+  --secondary_color: #0040a4;
+  --color_dark: white;
+  --color_light: rgb(17, 17, 29);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bgc_dark);
+  color: var(--color_dark);
+  position: relative;
+ 
+}
+
+/*Style Navbar*/
+#navBar{
+  width: 100%;
+  height: 4cm;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(30px);
+  position: fixed;
+  z-index: 2000;
+  top: 0px;
+}
+.navContainer{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.logo{
+  width: 9cm;
+  justify-content: start;
+}
+.menuContainer{
+  color: var(--color_dark);
+  width: 20cm;
+  justify-content: space-evenly;
+  list-style: none;
+}
+.menuStyle{
+  width: 4cm;
+  height: 2cm;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a{
+  height: 100%;
+  text-decoration: none;
+  color: var(--primary_color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+}
+a:hover{
+  width: 50%;
+  border-bottom: 5px solid var(--primary_color);
+  font-weight: bold;
+}
+.fas,.far{
+  height: 50%;
+  font-size: 30px;
+}
+.actif{
+  width: 2cm;
+  border-bottom: 5px solid var(--primary_color);
+  font-weight: bold;
+}
+
+.menuResponsive, .ParentMenuRspons{
+  display: none;
+}
+
+@media (width <= 768px) {
+  .menuStyle{
+    display: none;
+  }
+  .menuResponsive{
+    position: absolute;
+    top: 20%;
+    right: 0%;
+    display: flex;
+    color: var(--primary_color);
+    background-color: transparent;
+    border: none;
+  }
+  .ParentMenuRspons{
+    backdrop-filter: blur(10px);
+    width: 200vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+    position: absolute;
+    z-index: 1000;
+    right: 0%;
+    top: 60%;
+    display: none;
+  }
+  .menuStyleResponsive{
+    position: relative;
+    right: 5%;
+  }
+  .actif{
+    display: none;
+  }
+}

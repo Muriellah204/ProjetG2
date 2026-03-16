@@ -3,7 +3,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuContainer = document.querySelector(".menuContainer");
     const menuResponsive = document.querySelector(".menuResponsive");
     const ParentMenuRspons = document.querySelector(".ParentMenuRspons");
+    const links=document.querySelectorAll(".menuStyle a")
 
+    /* menu actif */    
+    links.forEach(link=>{        
+        link.addEventListener("click",()=>{
+            links.forEach(l=>l.classList.remove("actif"))            
+            link.classList.add("actif")        
+        })        
+    })
+    
     function checkScreen() {
 
         if (window.innerWidth >= 768) {

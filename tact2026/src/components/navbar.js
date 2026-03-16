@@ -6,4 +6,6 @@ document.addEventListener("DOMContentLoaded",()=>{
     actif.addEventListener("click",()=>{
         actif.classList.toggle("actif");
     })
+    console.log("mety na tsy mety");
+    
 });

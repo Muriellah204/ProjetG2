@@ -14,6 +14,7 @@
   text-rendering: optimizeLegibility;
 }
 
+<<<<<<< HEAD
 img{
   margin: 30px;padding: 0;
   height: 90%;
@@ -42,6 +43,22 @@ img{
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+=======
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bgc_dark);
+  color: var(--color_dark);
+  position: relative;
+}
+
+.Container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+>>>>>>> page-accueil
 }
 .corpAccueil{
   width: 49%;
@@ -51,6 +68,7 @@ img{
   justify-content: center;
 }
 .presentation{
+<<<<<<< HEAD
   flex-direction: column;
   p{
     font-style: italic;
@@ -61,6 +79,11 @@ img{
   }
 }
 
+=======
+  display: flex;
+  flex-direction: column;
+}
+>>>>>>> page-accueil
 .photoContainer{
   background-color: var(--secondary_color);
   width: 10cm;
@@ -93,6 +116,7 @@ img{
 .rotate-70{
   height: 150%;
   rotate: 50deg;
+<<<<<<< HEAD
 }
 .bouton button:nth-child(1){
   background: linear-gradient(90deg,#00419e,#f15910);
@@ -137,4 +161,6 @@ span{
   span{
     color: var(--color_dark);
   }
+=======
+>>>>>>> page-accueil
 }

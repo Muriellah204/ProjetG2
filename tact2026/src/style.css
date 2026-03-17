@@ -13,6 +13,7 @@
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
+<<<<<<< HEAD
 
 body {
   margin: 0;
@@ -24,6 +25,9 @@ body {
 }
 
 /*Style Navbar*/
+=======
+/* Navbar CSS */
+>>>>>>> page-accueil
 #navBar{
   width: 100%;
   height: 4cm;
@@ -32,7 +36,7 @@ body {
   align-items: center;
   backdrop-filter: blur(30px);
   position: fixed;
-  z-index: 2000;
+  z-index: 3000;
   top: 0px;
 }
 .navContainer{
@@ -41,17 +45,17 @@ body {
   align-items: center;
 }
 .logo{
-  width: 9cm;
+  width: 10%;
   justify-content: start;
 }
 .menuContainer{
   color: var(--color_dark);
-  width: 20cm;
+  width: 80%;
   justify-content: space-evenly;
   list-style: none;
 }
 .menuStyle{
-  width: 4cm;
+  width: 20%;
   height: 2cm;
   text-transform: uppercase;
   display: flex;
@@ -82,11 +86,36 @@ a:hover{
   border-bottom: 5px solid var(--primary_color);
   font-weight: bold;
 }
+<<<<<<< HEAD
 
 .menuResponsive, .ParentMenuRspons{
   display: none;
 }
 
+=======
+.menuResponsive, .ParentMenuRspons{
+  display: none;
+}
+.Tactinfo{
+  margin: 30px;padding: 0;
+  height: 90%;
+}
+
+.parent{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 0;
+  top: 4cm;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.GrTitre{
+  margin: 0;
+  padding: 0;
+}
+>>>>>>> page-accueil
 @media (width <= 768px) {
   .menuStyle{
     display: none;

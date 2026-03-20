@@ -15,15 +15,15 @@
 }
 /* Navbar CSS */
 #navBar{
-  width: 100%;
-  height: 4cm;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  backdrop-filter: blur(30px);
-  position: fixed;
-  z-index: 3000;
-  top: 0px;
+width: 100%;
+height: 4cm;
+display: flex;
+justify-content: space-between;
+align-items: center;
+backdrop-filter: blur(30px);
+position: fixed;
+z-index: 3000;
+top: 0px;
 }
 .navContainer{
   height: 100%;
@@ -58,19 +58,17 @@ a{
   align-items: center;
   transition: 1s;
 }
-a:hover{
-  width: 50%;
-  border-bottom: 5px solid var(--primary_color);
+.menuStyle a:hover{
+  border-bottom: 4px solid var(--primary_color);
   font-weight: bold;
+}
+.menuStyle a.actif{
+  border-bottom:4px solid var(--primary_color);
+  font-weight:bold;
 }
 .fas,.far{
   height: 50%;
   font-size: 30px;
-}
-.actif{
-  width: 2cm;
-  border-bottom: 5px solid var(--primary_color);
-  font-weight: bold;
 }
 .menuResponsive, .ParentMenuRspons{
   display: none;
@@ -93,6 +91,9 @@ a:hover{
 .GrTitre{
   margin: 0;
   padding: 0;
+}
+.ParentMenuRspons.active{
+  display:flex;
 }
 @media (width <= 768px) {
   .menuStyle{
@@ -125,7 +126,13 @@ a:hover{
     position: relative;
     right: 5%;
   }
-  .actif{
-    display: none;
+  .menuStyleResponsive a.actif{
+    border-bottom:4px solid var(--primary_color);
+    font-weight:bold;
+  }
+  .menuStyleResponsive a:hover{
+    border-bottom: 4px solid var(--primary_color);
+    font-weight: bold;
   }
 }
+

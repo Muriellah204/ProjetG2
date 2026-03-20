@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if(window.innerWidth<=768){
-        
+        menuStyle.style.display = "none";
     }
 
     menuResponsive.addEventListener("click", () => {

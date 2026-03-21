@@ -1,90 +1,247 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" type="image/svg+xml" href="../../public/vite.svg" />
+    <link rel="stylesheet" href="../../public/icone/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../assets/css/services.css">
+    <title>Services</title>
 </head>
+
 <body>
-    <div class="parent">
-        <!-- //c'est ta section ici -->
-        <div class="section-top">
-            <div class="card-top1"></div>
-            <div class="card-top2"></div>
+    <nav id="navBar">
+        <div class="logo navContainer">
+            <img src="../../public/images/fond et logo/Logo_Tact_Png.png" alt="logo Tactinfo" class="Tactinfo">
         </div>
-
-
-        <!-- //c'est ma section ici -->
-        <div class="section-bottom">
-            <div class="ligne"></div>
-            <h1>Nos solutions informatiques</h1>
-            <div class="card-bottom1">
-                <div class="card-interne1">
-                    <div class="img1">
-                        <img src="" alt="">
-                    </div>
-                    <div class="texte1">
-                        <h2>éveloppement web</h2>
-                        <p>Conception, déploiement et gestion de sites web performants et adaptés à vos besoins.</p>
-                    </div>
-                </div>
-                <div class="card-interne2">
-                    <div class="img2"></div>
-                    <div class="texte2">
-                        <h2>Infogérance & Réassurance</h2>
-                        <p>Solutions de sécurité avancées pour protéger vos données et votre infrastructure contre les menaces.</p>
-                    </div>
-                </div>
-                <div class="card-interne3">
-                    <div class="img3"></div>
-                    <div class="texte3">
-                        <h2>Sécurité & Backups</h2>
-                        <p>Solutions de sauvegarde et de récupération pour garantir la continuité de votre activité.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="card-bottom2">
-                <h1>Optimisation & Support IT</h1>
-                <p>Maximisez votre efficitance</p>
-
-                <div class="card-img"></div>
-
-                <div class="card-description">
-                    <div class="description-item1">
-                        <div class="sec-icon1"></div>
-                            <div class="icon-audit"></div>
-                        </div>
-                        <div class="sec-para1">
-                            <h2>Audit Informatique</h2>
-                            <p>Analyse complète de votre infrastructure IT pour identifier les points d'amélioration et les risques potentiels.</p>
-                        </div>
-                    </div>
-
-                    <div class="description-item2">
-                        <div class="sec-icon2">
-                            <div class="icon-optimisation"></div>
-                        </div>
-                        <div class="sec-para2">
-                            <h2>Optimisation des Performances</h2>
-                            <p>Amélioration des performances de vos systèmes et réseaux pour garantir une efficacité maximale.</p>
-                        </div>
-                    </div>
-
-                    <div class="description-item3">
-                        <div class="sec-icon3">
-                            <div class="icon-support"></div>
-                        </div>
-                        <div class="sec-para3">
-                            <h2>Support Technique 24/7</h2>
-                        <p>Assistance continue pour résoudre rapidement les problèmes techniques et minimiser les temps d'arrêt.</p>
-                        </div>
-                    </div>
-
-                    <button>Contactez - Nous</button>
-                </div>
+        <div class="menuContainer navContainer">
+            <li class="menu1 menuStyle"><a href="../../index.html"><i class="fas fa-home"></i>Home </a></li>
+            <li class="menu2 menuStyle"><a href="../pages/services.html"><i class="fas fa-globe"></i>Service</a></li>
+            <li class="menu3 menuStyle"><a href="../pages/contact.html"><i class="fas fa-phone"></i>Contact</a></li>
+            <li class="menu4 menuStyle"><a href="../pages/auth.html"><i
+                        class="fas fa-exclamation-circle"></i>Authentify</a></li>
+            <li>
+                <button type="button" class="menuStyle menuResponsive"><i class="fas fa-bars"></i></button>
+            </li>
+            <div class="ParentMenuRspons">
+                <li class="menuStyleResponsive menu1"><a href="./index.html" class="actif">Home</a></li>
+                <li class="menuStyleResponsive menu2"><a href="./src/pages/services.html">Service</a></li>
+                <li class="menuStyleResponsive menu3"><a href="./src/pages/contact.html">Contact</a></li>
+                <li class="menuStyleResponsive menu4"><a href="./src/pages/auth.html">Authentify</a></li>
             </div>
         </div>
-    </div>
+    </nav>
+    <div class="espace-nav"></div>
+    <main id="formation-container">
+        <!-- A MOI ME JOUER  -->
+        <h1 class="titre-service">
+            <div class="cote-gauche"></div>Nos Services<div class="cote-droite"></div>
+        </h1>
+        <div class="btn-formation"><!-- btn initial et modulaire  --></div>
+        <div class="parent-initiale-modulaire">
+            <section class="formation-initiale">
+                <h2 class="sous-titre-services">Formation Initiale ( DTS / LICENSE )</h2><br>
+                <p class="lettre">Formation fondamentale pour devenir développeur et ingénieur informatique</p><br>
+                <div class="parent-box-formation">
+                    <div class="box-formation">
+                        <div class="titre-formation">
+                            <div class="icone-box">
+                                <i class="fas fa-cogs cogs"></i>
+                            </div>
+                            <div class="titre-f">
+                                <p>Maintenance et Administration Système</p>
+                            </div>
+                        </div>
+                        <div class="image-formation">
+                            <img src="../../public/images/img_services/maintenance.jpg" alt="maintenance">
+                        </div>
+                        <div class="description-formation">
+                            <p>Assurer le bon fonctionnement des systèmes, gestion des serveurs et optimisation des
+                                performances.</p>
+                        </div>
+                        <div class="savoir-plus">
+                            <button>En savoir plus   <i class="fas fa-info-circle"></i></button>
+                        </div>
+                        <div class="parent-style-box">
+                            <div class="style-box"></div>
+                        </div>
+                    </div>
+                    <div class="box-formation">
+                        <div class="titre-formation">
+                            <div class="icone-box">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="titre-f">
+                                <p>Développeur d'Application</p>
+                            </div>
+                        </div>
+                        <div class="image-formation">
+                            <img src="../../public/images/img_services/dev.jpg" alt="Developpeur">
+                        </div>
+                        <div class="description-formation">
+                            <p>Création d'applications web et mobiles avec les dernières
+                                technologies pour répondre aux besoins des entreprises et
+                                projets étudiants.
+                            </p>
+                        </div>
+                        <div class="savoir-plus">
+                            <button>En savoir plus   <i class="fas fa-info-circle"></i></button>
+                        </div>
+                        <div class="parent-style-box">
+                            <div class="style-box"></div>
+                        </div>
+                    </div>
+                    <div class="box-formation">
+                        <div class="titre-formation">
+                            <div class="icone-box">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <div class="titre-f">
+                                <p>Administration Réseaux Locaux d'Entreprise</p>
+                            </div>
+                        </div>
+                        <div class="image-formation">
+                            <img src="../../public/images/img_services/Reseaux.jpg" alt="Réseaux">
+                        </div>
+                        <div class="description-formation">
+                            <p>Configuration et gestion des réseaux locaux. sécurité
+                                et suivi des infrastructures réseaux.
+                            </p>
+                        </div>
+                        <div class="savoir-plus">
+                            <button>En savoir plus   <i class="fas fa-info-circle"></i></button>
+                        </div>
+                        <div class="parent-style-box">
+                            <div class="style-box"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="formation-modulaire">
+                <h2 class="sous-titre-services">Formation Modulaire</h2><br>
+                <h3>Bureautique ( 40 000 Ar/mois )</h3><br><br>
+                <div class="cont-bureautique">
+                    <div class="bureautique">
+                        <div class="cont-image-bureautique">
+                            <div class="image-bureautique">
+                                <img src="../../public/images/img_services/bureautique.jpg" alt="">
+                            </div>
+                            <div class="image-bureautique">
+                                <img src="../../public/images/img_services/bureautique.jpg" alt="">
+                            </div>
+                            <div class="image-bureautique">
+                                <img src="../../public/images/img_services/bureautique.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="description-bureautique">
+                            <div class="module-haut word">
+                                <div class="logo-bureautique">
+                                    <img src="../../public/images/img_services/word.png" alt="">
+                                    <h1>Word</h1>
+                                </div>
+                                <div class="module-description">
+                                    <p>Apprenez à créer et gérer vos documents professionnels</p>
+                                </div>
+                            </div>
+                            <div class="module-haut excel">
+                                <div class="logo-bureautique">
+                                    <img src="../../public/images/img_services/excel.png" alt="">
+                                    <h1 id="excel">Excel</h1>
+                                </div>
+                                <div class="module-description">
+                                    <p>Maîtrisez les tableaux, formules et graphiques pour vos analyses de données</p>
+                                </div>
+                            </div>
+                            <div class="module-bas powerpoint">
+                                <div class="logo-bureautique">
+                                    <img src="../../public/images/img_services/powerpoint.png" alt="">
+                                    <h1 id="powerpoint">Powerpoint</h1>
+                                </div>
+                                <div class="module-description">
+                                    <p>Créez des présentations efficaces et interactives</p>
+                                </div>
+                            </div>
+                            <div class="module-bas internet">
+                                <div class="logo-bureautique">
+                                    <img src="../../public/images/img_services/internet.png" alt="">
+                                    <h1 id="internet">Internet</h1>
+                                </div>
+                                <div class="module-description">
+                                    <p>Navigation, recherche et communication professionnelle en ligne</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bureautique-mobile">
+                        <div class="word-mobile mobile">
+                            <div class="logo-word lg">
+                                <img src="../../public/images/img_services/word.png" alt="">
+                                <h2>Word</h2>
+                            </div>
+                            <div class="btn-word btn-mobile">
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </div>
+                        <div class="desc-mobile-word">
+                            <p>Apprenez à créer et gérer vos documents professionnels</p>
+                        </div>
+                        <div class="excel-mobile mobile">
+                            <div class="btn-excel btn-mobile">
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                            <div class="logo-excel lg">
+                                <img src="../../public/images/img_services/excel.png" alt="">
+                                <h2>Excel</h2>
+                            </div>
+                        </div>
+                        <div class="desc-mobile-excel">
+                            <p>Maîtrisez les tableaux, formules et graphiques pour vos analyses de données</p>
+                        </div>
+                        <div class="powerpoint-mobile mobile">
+                            <div class="logo-powerpoint lg">
+                                <img src="../../public/images/img_services/powerpoint.png" alt="">
+                                <h2>Power-<br>point</h2>
+                            </div>
+                            <div class="btn-powerpoint btn-mobile">
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </div>
+                        <div class="desc-mobile-powerpoint">
+                            <p>Créez des présentations efficaces et interactives</p>
+                        </div>
+                        <div class="internet-mobile mobile">
+                            <div class="btn-internet btn-mobile">
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                            <div class="logo-internet lg">
+                                <img src="../../public/images/img_services/internet.png" alt="">
+                                <h2>Internet</h2>
+                            </div>
+                        </div>
+                        <div class="desc-mobile-internet">
+                            <p>Navigation, recherche et communication professionnelle en ligne</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- A TOI TE JOUER MURIELLAH !-->
+                <div class="avancee">
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+    <!-- Pourquoi nous choisir ?-->
+    <main class="support">
+
+    </main>
+
+    <script src="../assets/js/services.js"></script>
 </body>
+
 </html>

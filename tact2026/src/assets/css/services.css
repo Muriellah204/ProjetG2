@@ -1,34 +1,653 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
-
+  font-weight: 400;  
   --bgc_dark: rgb(17, 17, 29);
   --bgc_light: white;
   --primary_color: orange;
   --secondary_color: skyblue;
   --color_dark: white;
-  --color_light: rgb(17, 17, 29);
-
+  --color_light: rgb(17, 17, 29);  
+  --white : rgb(228, 228, 228);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
-.parent {
+
+/* ma partie pour le style de page services */
+.espace-nav {
+  height: 4cm;
+}
+.titre-service {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
-  padding: 20px;
-  background-color: var(--bgc_light);
-  color: var(--color_light);
+  gap: 2rem;
+  color: var(--primary_color);
+  padding: 0 0.5rem;
 }
+.cote-gauche {
+  background: linear-gradient(90deg, transparent, var(--primary_color) 80%);
+  width: 10rem;
+  height: 0.5rem;
+}
+.cote-droite {
+  background: linear-gradient(90deg, var(--primary_color) 40%, transparent);
+  width: 10rem;
+  height: 0.5rem;
+}
+.btn-formation {
+  border-bottom : 2px ridge var(--bgc_dark);
+  width: 100vw;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.btn-f {
+  height: 2.5rem;
+  width: 14.5rem;
+  border : 2px groove var(--bgc_dark);
+  border-radius: 10px;
+  background-color: transparent;
+  color: var(--white);
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 1.5px;
+  word-spacing: 5px;
+  transition: all 0.2s linear;
+}
+.btn-initiale {
+  margin-left: 2rem;
+}
+.btn-modulaire {
+  margin-right: 2rem;
+}
+.actif-formation {
+  color: var(--secondary_color);
+  border: 1px solid var(--secondary_color);
+}
+.btn-f:hover {
+  color: var(--secondary_color);
+  border: 1px solid var(--secondary_color);
+}
+@keyframes hoverFormation {
+  to{
+    color: var(--secondary_color);
+    border: 1px solid var(--secondary_color);
+  }
+}
+.ligne-verticale {
+  background-color: black;
+  border-left : 2px ridge var(--bgc_dark);
+  height: 2.5rem;
+}
+
+/* Formation Initiale */
+.parent-initiale-modulaire {
+  position: relative;
+  padding: 20px 0;
+}
+.formation-initiale {
+  width: 100vw;
+  position: absolute;
+  padding-bottom: 2rem;
+}
+.lettre {
+  text-align: center;
+  color: var(--white);
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+.sous-titre-services {
+  text-align: center;
+  color: var(--secondary_color);
+  padding: 0 0.5rem;
+}
+.formation-modulaire {
+  position: absolute;
+  display: none;
+  width: 100vw;
+  padding-bottom: 4rem;
+  h3 {
+    text-align: center;
+    color: rgb(228, 228, 228);
+  }
+}
+/* BOX FORMATION */
+.parent-box-formation {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 0rem 2rem;
+}
+.parent-style-box {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  top: 0;
+  justify-content: center;
+}
+.style-box {
+  background-color: var(--primary_color);
+  height: 0.25rem;
+  width: 100%;
+  animation: left-right 0.3s linear;
+  display: none;
+}
+.box-formation {
+  background-color: hsl(240, 26%, 21%);
+  width: 20rem;
+  min-width: 16rem;
+  height: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s linear;
+  position: relative;
+  padding-bottom: 3rem;
+  transition: all 0.3s linear;
+}
+.box-formation:hover {
+  box-shadow: 0px 0px 10px var(--primary_color);
+  border: 1px solid var(--primary_color);
+  transform: translateY(-10px);
+  .style-box {
+    display: block;
+  }
+}
+.titre-formation {
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.74);
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  overflow-wrap: anywhere ;
+  padding: 0.5rem 0;
+}
+.icone-box {
+  margin-left: 25px;
+  i{
+    color:var(--primary_color);
+    font-size: 35px;
+  }
+}
+.titre-f {
+  margin-right: 25px;
+  p{
+    color: var(--primary_color);
+    color: var(--white);
+    font-weight:500;
+    text-align: start;
+    font-size: 19px;
+  }
+}
+.image-formation {
+  background-color: blue;
+  width: 100%;
+  height: 11rem;
+  overflow: hidden;
+  img{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.3s linear;
+  }
+}
+
+.description-formation {
+  /* background-color: blue; */
+  padding: 5px 15px;
+}
+.savoir-plus {
+  button {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3rem;
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+    background-color:var(--primary_color);
+    color: black;
+    cursor: pointer;
+    transition: all 0.2s linear;
+  }
+  button:hover {
+    background-color: black;
+    color: var(--primary_color);
+  }
+  i{
+    font-size: 25px;
+    color: rgb(15, 15, 150);
+    background-color: var(--primary_color);
+    border: none;
+    border-radius: 50%;
+  }
+}
+/* BUREAUTIQUE */
+.bureautique {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.description-bureautique {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+.cont-image-bureautique {
+  display: flex;
+  position: relative;
+}
+.image-bureautique {
+  background-color: var(--secondary_color);
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  width: 27rem;
+  height: 22rem;
+  transition: all 0.5s linear;
+  img {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+  }
+}
+.image-bureautique:nth-child(2),.image-bureautique:nth-child(3) {
+  display: none;
+}
+.module-haut {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 6% 100%);
+  background: linear-gradient(90deg , rgb(42, 42, 65) 20%,transparent);
+  width: 36rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+}
+.module-bas {
+  clip-path: polygon(6% 0, 100% 0%, 100% 100%, 0% 100%);
+  background: linear-gradient(90deg , rgb(42, 42, 65) 20%,transparent);
+  width: 36rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+}
+.word {
+  position: relative;
+  right: 3.2rem;
+}
+.internet {
+  position: relative;
+  right: 3.2rem;
+}
+.logo-bureautique {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    color: #1565c0;
+    padding-right: 1.2rem;
+    border-right: 5px solid #1565c0;
+  }
+}
+#excel {
+  border-right : 5px solid #4caf50;
+}
+.excel {
+  h1 {
+    color: #4caf50;
+  }
+}
+#powerpoint {
+  color: #ff5722;
+  border-right: 5px solid #ff5722;
+}
+.logo-bureautique img {
+  width: 45px;
+  margin-left: 40px;
+  /* box-shadow: 0 0 10px black; */
+  /* border-radius: 50%; */
+}
+.module-description {
+  p {
+    color: rgb(230, 230, 230);
+    margin-left: 1rem;
+  }
+}
+
+#internet {
+  color: #7acefa;
+  border-right: 5px solid #7acefa;
+}
+
+.bureautique-mobile {
+  width: 90%;
+  height: 15rem;
+  margin: auto;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  display: none;
+  img {
+    width: 2.5rem;
+    object-fit: contain;
+  }
+}
+.word-mobile {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.desc-mobile-word {
+  background-color: #1565c0;
+  width: 100%;
+  min-height: 4rem;
+  position: absolute;
+  z-index: -10;
+  box-sizing: border-box;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 4rem;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  display: none;
+}
+.desc-mobile-excel {
+  background-color: #4caf50;
+  width: 100%;
+  min-height: 4rem;
+  position: absolute;
+  z-index: -10;
+  box-sizing: border-box;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 4rem;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  display: none;
+}
+.desc-mobile-powerpoint {
+  background-color: #ff5722;
+  width: 100%;
+  min-height: 4rem;
+  position: absolute;
+  z-index: -10;
+  box-sizing: border-box;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 4rem;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  display: none;
+}
+.desc-mobile-internet {
+  background-color: #7acefa;
+  width: 100%;
+  min-height: 4rem;
+  position: absolute;
+  z-index: -10;
+  box-sizing: border-box;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 4rem;
+  color: black;
+  font-size: 18px;
+  display: none;
+}
+.mobile {
+  display: flex;
+  align-items: center;
+  i {
+    font-size: 25px;
+    transform: all 0.3s ease-in-out;
+    color: rgb(22, 22, 34);
+  }
+}
+.logo-word {
+  h2 {
+    color: #1565c0;
+  }
+}
+.lg {
+  background-color: rgb(42, 42, 65);
+  width: 11rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  h2 {
+    transform: translate(-18px);
+    line-height: 23px;
+  }
+}
+.btn-word {
+  background-color: #1565c0;
+}
+.btn-mobile {
+  height: 4rem;
+  width: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.excel-mobile {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.btn-excel {
+  background-color: #4caf50;
+}
+.powerpoint-mobile {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.btn-powerpoint {
+  background-color: #ff5722;
+}
+.internet-mobile {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.btn-internet {
+  background-color: #7acefa;
+}
+
+/* ANIMATION */
+@keyframes left-right {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes up-down {
+  from {
+    top : 0;
+    opacity: 0;
+  }
+  to {
+    top : 4rem;
+    opacity: 1;
+  }
+}
+@keyframes down-up {
+  from {
+    bottom : 0;
+    opacity: 0;
+  }
+  to {
+    bottom : 4rem;
+    opacity: 1;
+  }
+}
+@keyframes sortir-up {
+  from {
+    top: 4rem;
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    top: 0;
+  }
+}
+@keyframes sortir-down {
+  from {
+    bottom: 4rem;
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    bottom: 0;
+  }
+}
+
+/* RESPONSIVE */
+/* MOBILE */
+@media (max-width : 767px) {
+  .box-formation {
+    width: 17rem;
+  }
+  .btn-f {
+    padding: 0.5rem 0.5rem;
+    height: auto;
+    font-size: 12px;
+  }
+  .titre-service {
+    font-size: 20px;
+  }
+  .cote-droite, .cote-gauche {
+    width: 5rem;
+    height: 0.5rem;
+  }
+  .bureautique {
+    display: none;
+  }
+  .bureautique-mobile {
+    display: inherit;
+  }
+}
+/* TABLET */
+@media (min-width: 768px) and (max-width: 992px) {
+  /* Formaton initiale */
+  .box-formation {
+    width: 17rem;
+  }
+  .titre-service {
+    font-size: 27px;
+  }
+  .image-bureautique {
+    clip-path: polygon(0% 0%, 70% 0%, 100% 50%, 70% 100%, 0% 100%, 30% 50%);
+    width: 12rem;
+    height: 18rem;
+    img {
+      object-position: center;
+    }
+  }
+  .logo-bureautique img {
+    width: 45px;
+    margin-left: 25px;
+  }
+  .description-bureautique {
+    gap: 0.8rem;
+  }
+  .module-haut {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 4% 100%);
+  }
+  .module-bas {
+    clip-path: polygon(4% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .word {
+    right: 2.5rem;
+  }
+  .excel {
+    position: relative;
+    right: 0.85rem;
+  }
+  .powerpoint {
+    position: relative;
+    right: 0.85rem;
+  }
+  .internet {
+    position: relative;
+    right: 2.5rem;
+  }
+  .logo-bureautique {
+    h1 {
+      font-size: 25px;
+      padding-right: 1.2rem;
+      border-right: 5px solid #1565c0;
+    }
+  }
+}
+/* DESKTOP */
+@media (min-width: 993px) and (max-width: 1199px) {
+
+  .image-bureautique {
+    clip-path: polygon(0% 0%, 70% 0%, 100% 50%, 70% 100%, 0% 100%, 30% 50%);
+    width: 12rem;
+    height: 18rem;
+    img {
+      object-position: center;
+    }
+  }
+  .description-bureautique {
+    gap: 0.8rem;
+  }
+  .module-haut {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 4% 100%);
+  }
+  .module-bas {
+    clip-path: polygon(4% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .word {
+    right: 1rem;
+  }
+  .excel {
+    position: relative;
+    right: -0.8rem;
+  }
+  .powerpoint {
+    position: relative;
+    right: -0.8rem;
+  }
+  .internet {
+    position: relative;
+    right: 1rem;
+  }
+}
+/* EXTRA LARGE DEVICES */
+@media (min-width: 1200px) {
+  .image-bureautique {
+    min-width: 27rem;
+  }
+}
+
+
 
 /* ta partie pour le style  la page services */
-
-
-
-/* ma partie pour le style la page services */
-.card-bottom1{
-    display: flex;
-}

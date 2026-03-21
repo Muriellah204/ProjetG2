@@ -1,7 +1,7 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --line-height: 1.5;
+  --font-weight: 400;
 
   --bgc_dark: rgb(17, 17, 29);
   --bgc_light: white;
@@ -10,24 +10,10 @@
   --color_dark: white;
   --color_light: rgb(17, 17, 29);
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+  --font-synthesis: none;
+  --text-rendering: optimizeLegibility;
 }
-<<<<<<< HEAD
-
-body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--bgc_dark);
-  color: var(--color_dark);
-  position: relative;
- 
-}
-
-/*Style Navbar*/
-=======
 /* Navbar CSS */
->>>>>>> page-accueil
 #navBar{
   width: 100%;
   height: 4cm;
@@ -72,27 +58,18 @@ a{
   align-items: center;
   transition: 1s;
 }
-a:hover{
-  width: 50%;
-  border-bottom: 5px solid var(--primary_color);
+.menuStyle a:hover{
+  border-bottom: 4px solid var(--primary_color);
   font-weight: bold;
+}
+.menuStyle a.actif{
+  border-bottom:4px solid var(--primary_color);
+  font-weight:bold;
 }
 .fas,.far{
   height: 50%;
   font-size: 30px;
 }
-.actif{
-  width: 2cm;
-  border-bottom: 5px solid var(--primary_color);
-  font-weight: bold;
-}
-<<<<<<< HEAD
-
-.menuResponsive, .ParentMenuRspons{
-  display: none;
-}
-
-=======
 .menuResponsive, .ParentMenuRspons{
   display: none;
 }
@@ -101,21 +78,9 @@ a:hover{
   height: 90%;
 }
 
-.parent{
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  z-index: 0;
-  top: 4cm;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+.ParentMenuRspons.active{
+  display:flex;
 }
-.GrTitre{
-  margin: 0;
-  padding: 0;
-}
->>>>>>> page-accueil
 @media (width <= 768px) {
   .menuStyle{
     display: none;
@@ -147,7 +112,13 @@ a:hover{
     position: relative;
     right: 5%;
   }
-  .actif{
-    display: none;
+  .menuStyleResponsive a.actif{
+    border-bottom:4px solid var(--primary_color);
+    font-weight:bold;
+  }
+  .menuStyleResponsive a:hover{
+    border-bottom: 4px solid var(--primary_color);
+    font-weight: bold;
   }
 }
+

@@ -37,3 +37,64 @@ btnModulaire.addEventListener('click',() => {
     formationModulaire.style.display = "block";
     formationInitiale.style.display = "none";
 })
+
+// clique responsive modulaire
+// selection bouton
+const btnWord = document.querySelector('.btn-word');
+const btnExcel = document.querySelector('.btn-excel');
+const btnPowerpoint = document.querySelector('.btn-powerpoint');
+const btnInternet = document.querySelector('.btn-internet');
+// selection description
+const descWord = document.querySelector('.desc-mobile-word');
+const descExcel = document.querySelector('.desc-mobile-excel');
+const descPowerpoint = document.querySelector('.desc-mobile-powerpoint');
+const descInternet = document.querySelector('.desc-mobile-internet');
+// bouton clique
+btnWord.addEventListener('click',() => {
+    setTimeout(() => {
+    descExcel.style.display = "none";
+    descPowerpoint.style.display = "none";
+    descInternet.style.display = "none";
+    },400)
+    descExcel.style.animation = "sortir-up 0.5s";
+    descPowerpoint.style.animation = "sortir-down 0.5s";
+    descInternet.style.animation = "sortir-down 0.5s";
+    descWord.style.display = "block";
+    descWord.style.animation = "up-down 0.5s"
+})
+btnExcel.addEventListener('click',() => {
+    setTimeout(() => {
+    descWord.style.display = "none";
+    descPowerpoint.style.display = "none";
+    descInternet.style.display = "none";
+    },400)
+    descWord.style.animation = "sortir-up 0.5s";
+    descPowerpoint.style.animation = "sortir-down 0.5s";
+    descInternet.style.animation = "sortir-down 0.5s";
+    descExcel.style.display = "block";
+    descExcel.style.animation = "up-down 0.5s"
+})
+btnPowerpoint.addEventListener('click',() => {
+    setTimeout(() => {
+    descExcel.style.display = "none";
+    descWord.style.display = "none";
+    descInternet.style.display = "none";
+    },400)
+    descExcel.style.animation = "sortir-up 0.5s";
+    descWord.style.animation = "sortir-up 0.5s";
+    descInternet.style.animation = "sortir-down 0.5s";
+    descPowerpoint.style.display = "block";
+    descPowerpoint.style.animation = "down-up 0.5s"
+})
+btnInternet.addEventListener('click',() => {
+    setTimeout(() => {
+    descExcel.style.display = "none";
+    descWord.style.display = "none";
+    descPowerpoint.style.display = "none";
+    },400)
+    descExcel.style.animation = "sortir-up 0.5s";
+    descWord.style.animation = "sortir-up 0.5s";
+    descPowerpoint.style.animation = "sortir-down 0.5s";
+    descInternet.style.display = "block";
+    descInternet.style.animation = "down-up 0.5s"
+})

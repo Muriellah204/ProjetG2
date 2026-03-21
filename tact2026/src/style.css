@@ -81,6 +81,16 @@ a{
 .ParentMenuRspons.active{
   display:flex;
 }
+
+.theme{
+  color: var(--primary_color);
+  background-color: transparent;
+  border: none;
+}
+.themeBtn{
+  background-color: var(--bgc_dark);
+  color: var(--color_dark);
+}
 @media (width <= 768px) {
   .menuStyle{
     display: none;

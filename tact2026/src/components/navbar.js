@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuResponsive = document.querySelector(".menuResponsive")
     const ParentMenuRspons = document.querySelector(".ParentMenuRspons");
     const actif=document.querySelector("a");
+    const theme = document.querySelector(".theme")
 
     /*affichage des menus en responsive*/
     menuResponsive.addEventListener('click',()=>{
@@ -15,5 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
         if (window.innerWidth > 768) {
             ParentMenuRspons.classList.remove('active');
         }
+    });
+
+    /*changer le theme*/
+    theme.addEventListener('click',()=>{
+        body.classList.toggle('themeBtn');
     });
 });
